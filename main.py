@@ -38,7 +38,7 @@ def main():
     music_folder = "./musica"
 
     try:
-        music_files = [os.path.join(music_folder, f) for f in os.listdir(music_folder) if f.endswith('.mp3')]
+        music_files = [os.path.join(music_folder, f) for f in os.listdir(music_folder) if f.endswith('.mp3', '.flac', '.wav', '.m4v', '.mp4')]
         if not music_files:
             raise FileNotFoundError("Nessun file musicale trovato nella cartella 'musica'.")
     except FileNotFoundError as e:
